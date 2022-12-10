@@ -8,5 +8,5 @@ ideal = 6
 
 if int(com) <= ideal:
     print("haha you get no bitches, do you? you fucking soyboy. LOOOOSER")
-if int(com) > ideal:
+else:
     print("based")
