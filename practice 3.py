@@ -1,5 +1,3 @@
-# running = True
-
 # while running:
  #   com = input()
   #  if com == "exit":
@@ -23,23 +21,23 @@ while running:
         num2 = input()
         ans = (int(num) + int(num2))
         print("the answer is " + str(ans))
-    if com == "subtract":
+    elif com == "subtract":
         print("enter 2 numbers")
         num = input()
         num2 = input()
         ans = (int(num) - int(num2))
         print("the answer is " + str(ans))
-    if com == "multiply":
+    elif com == "multiply":
         print("enter 2 numbers")
         num = input()
         num2 = input()
         ans = (int(num) * int(num2))
         print("the answer is " + str(ans))
-    if com == "divide":
+    elif com == "divide":
         print("enter 2 numbers")
         num = input()
         num2 = input()
         ans = (int(num) / int(num2))
         print("the answer is " + str(ans))
-    if com == "exit" or "stop":
+    elif com == "exit" or "stop":
         running = False
