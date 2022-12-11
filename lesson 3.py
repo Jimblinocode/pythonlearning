@@ -21,5 +21,5 @@
 mylist = ["sus", "amogus", 2, 1000, True]
 
 
-for item in range(40): 
+for item in mylist: 
     print("you are " + str(item))
