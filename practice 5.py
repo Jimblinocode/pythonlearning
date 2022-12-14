@@ -14,15 +14,13 @@ while running:
     com = input()
     if com == "Start" or com == "start":
         print("haha theres no actual game, gottem")
-        com = input()
     elif com == "Options" or com == "options":
-        print("vol - 4")
-        print("graphics - 1")
-        print("anti-aliasing - yes")
-        print("bitches - none")
-        com = input()
+        oplist = ["vol - 1", "graphics - 4", "anti-aliasing - yes", "bitches - none"]
+        for item in oplist:
+            print(item)
     elif com == "Credits" or com == "credits":
         print("Made by: Isaac Dority")
-        com = input()
     elif com == "Exit" or com == "exit":
         running = False
+    else:
+        print("INVALID COMMAND")
