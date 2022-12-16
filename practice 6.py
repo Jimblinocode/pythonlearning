@@ -16,8 +16,10 @@ for item in shop:
 
 while running:
     com = input()
+    
     if pgold == 0:
         print("sorry, you can't afford that")
+    
     elif com == "The Grass Sword of Thesophelese" or com == "Grass Sword of Thesophelese" or com == "Grass Sword":
         pgold-= 50
         inventory.append("Grass Sword of Thesophelese")
@@ -26,6 +28,7 @@ while running:
         print("Inventory:")
         for item in inventory:
             print(item)
+    
     elif com == "Spell: Finger Gun" or com == "Finger Gun":
         pgold-= 75
         inventory.append("Spell: Finger Gun")
@@ -34,6 +37,7 @@ while running:
         print("Inventory:")
         for item in inventory:
             print(item)
+    
     elif com == "Medium Health Potion" or com == "Health Potion":
         pgold-= 25
         inventory.append("Medium Health Potion")
@@ -42,6 +46,7 @@ while running:
         print("Inventory:")
         for item in inventory:
             print(item)
+    
     elif com == "The Magnum Dong Dildo Sword" or com == "Magnum Dong Dildo Sword" or com == "Dildo Sword":
         pgold-= 200
         inventory.append("Magnum Dong Dildo Sword")
@@ -50,7 +55,9 @@ while running:
         print("Inventory:")
         for item in inventory:
             print(item)
+    
     elif com == "Exit Shop" or com == "exit shop":
         running = False
+
     else:
         print("INVALID COMMAND")
