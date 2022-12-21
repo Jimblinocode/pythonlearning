@@ -6,12 +6,12 @@ numlist = []
 
 for i in range(10):
     com = input()
-    numlist.append(com)
+    numlist.append(int(com))
 
 larnum = 0
 for item in numlist:
-    if int(item) > larnum:
-        larnum = int(item)
+    if item > larnum:
+        larnum = item
 print("The largest number is " + str(larnum))
     
     
