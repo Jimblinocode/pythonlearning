@@ -27,14 +27,17 @@ while running:
                 larnum = item
         print("the largest integer is " + str(larnum))
     
-    # elif com == "2":
-        # smallnum = 0
-        # for item in intlist:
-            # if item < smallnum:
-                # smallnum = item
+    elif com == "2":
+        larnum = 0
+        for item in intlist:
+            if item > larnum:
+                larnum = item
+        snum = larnum
+        for item in intlist:
+            if item < snum:
+                snum = item
+        print("the smallest integer is " + str(snum))
     
-    # putting a pin in this for now
-
     elif com == "4":
         sum = 0
         for item in intlist:
