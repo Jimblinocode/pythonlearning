@@ -35,11 +35,7 @@ while running:
     
     # Second option process/output
     elif com == "2":
-        larnum = 0
-        for item in intlist:
-            if item > larnum:
-                larnum = item
-        snum = larnum #intlist[0]
+        snum = intlist[0]
         for item in intlist:
             if item < snum:
                 snum = item
