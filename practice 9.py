@@ -26,6 +26,7 @@ while running:
             if item > larnum:
                 larnum = item
         print("the largest integer is " + str(larnum))
+    
     # elif com == "2":
         # smallnum = 0
         # for item in intlist:
