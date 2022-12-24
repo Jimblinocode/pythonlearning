@@ -27,7 +27,7 @@ while running:
 
     # First option process/output
     if com == "1":
-        larnum = 0
+        larnum = intlist[0]
         for item in intlist:
             if item > larnum:
                 larnum = item
@@ -41,7 +41,24 @@ while running:
                 snum = item
         print("the smallest integer is " + str(snum))
     
-    
+    # third option process/output
+    elif com == "3":
+        print("Enter a number to find out if it exists on your list.")
+        com = input()
+        exist = False
+        for item in intlist:
+            if com == item:
+                exist = True
+            elif com != item:
+                exist = False
+        if exist == True:
+            print("item does exist")
+        elif exist == False:
+            print("item does not exist")
+        
+
+
+
     # Fourth option process/output
     elif com == "4":
         sum = 0
