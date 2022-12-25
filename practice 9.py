@@ -42,15 +42,14 @@ while running:
         print("the smallest integer is " + str(snum))
     
     # third option process/output
+    # intlist = [0, 1, 2, 3]
     elif com == "3":
-        print("Enter a number to find out if it exists on your list.")
-        com = input()
+        print("Enter a number to find out if it exists on the list of integers.")
+        com = int(input())
         exist = False
         for item in intlist:
             if com == item:
                 exist = True
-            elif com != item:
-                exist = False
         if exist == True:
             print("item does exist")
         elif exist == False:
