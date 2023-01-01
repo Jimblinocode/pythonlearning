@@ -1,13 +1,21 @@
-# Fibonacci sequence challenge 
+# Fibbonacci sequence challenge 
 
 # driver code
 
-print("What is the size of your fibonacci sequence?")
+print("What is the size of your fibbonacci sequence?")
 
-com = int(input)
+com = input()
 
-def Fibonnaci(size):
+def Fibbonacci(size):
     fiblist = [0, 1]
-    fib = fiblist[0] + fiblist[1]
-    for item in fiblist:
-        pass
+    if size == 1:
+        return[0]
+    elif size == 2:
+        return[0, 1]
+    for item in range(2,size):
+        fiblist.append(fiblist[item - 1] + fiblist[item - 2])  
+    return(fiblist)
+
+print("heres your fibbonacci sequence.")
+
+print(Fibbonacci(int(com)))
