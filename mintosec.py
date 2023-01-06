@@ -28,7 +28,7 @@ def daytosec(day):
     return(sec)
 
 def anytosec (any):
-    sec = daytosec(com2) + hourtosec(com3) + mintosec(com4) + any
+    sec = daytosec(com2) + hourtosec(com3) + mintosec(com4) + int(input())
     return(sec)
 
 print(anytosec(com))
