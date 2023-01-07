@@ -8,12 +8,10 @@
     # print(item)
 
 
-com = int(input())
-com2 = int(input())
-com3 = int(input())
-com4 = int(input())
-
-
+day = int(input())
+hour = int(input())
+minute = int(input())
+second = int(input())
 
 def mintosec(min):
     sec = min * 60
@@ -27,11 +25,11 @@ def daytosec(day):
     sec = day * hourtosec(24)
     return(sec)
 
-def anytosec (any):
-    sec = daytosec(com2) + hourtosec(com3) + mintosec(com4) + int(input())
+def anytosec (day, hour, min, sec):
+    sec = daytosec(day) + hourtosec(hour) + mintosec(min) + sec
     return(sec)
 
-print(anytosec(com))
+print(anytosec(day, hour, minute, second))
 
 # if com == "1":
     # print("how many minutes?")
