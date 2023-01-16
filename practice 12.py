@@ -8,8 +8,7 @@ shopdict = {
 
 def snackshop():
     for key in shopdict:
-        print(key, str(shopdict[key]),sep=" ---- ", end="\n  ")
-    return
+        print(key, shopdict[key], sep=" ---- ", end=" \n -- -- -- -- -- -- \n")
     
 
-print(snackshop())
+snackshop()
