@@ -1,3 +1,4 @@
+
 shopdict = {
     "pizza": 6.99,
     "shake": 4.99,
@@ -7,7 +8,7 @@ shopdict = {
 
 def snackshop():
     for key in shopdict:
-        print(key, str(shopdict[key]) + "\n-- -- -- -- -- -- -- ", sep=" ---- ", end="\n")
+        print(key, str(shopdict[key]),sep=" ---- ", end="\n  ")
     return
     
 
