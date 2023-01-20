@@ -26,6 +26,8 @@ def eightball(com):
 running = True
 while running:
     com = input()
-    eightball(com)
     if com == "exit":
         running = False
+    else:
+        eightball(com)
+    
