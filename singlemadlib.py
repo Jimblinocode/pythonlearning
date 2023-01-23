@@ -14,19 +14,19 @@
 #  > It's {name}. 
 #  > I'm so happy. 
 #  > {pronoun1} whispers in my ear, "This is my {nounrelatedname}". 
-#  > {pronoun1} grabs me with {pronoun3} powerful ogre hands, and puts me on my hands and knees.
+#  > {pronoun1} grabs me with {pronoun3} powerful {speciesslashidentifyer} hands, and puts me on my hands and knees.
 #  > i'm ready
-#  > I spread my {openablething} for {name}. 
-#  > {pronoun2} {verbs} my {openablethinginside}. 
+#  > I {synonym} my {openablething} for {name}. 
+#  > {pronoun1} {verbs} my {openablethinginside}. 
 #  > It hurts so much, but I do it for {name}. 
-#  > I can feel my {shorthandopenablething} {verbing} as my eyes start to water. 
-#  > I {verb} against his {noun}. 
+#  > I can feel my {shorthandopenablething} {verbing} as {namedoingverb}. 
+#  > I {verb} against {pronoun3} {noun}. 
 #  > I want to please {name}. 
-#  > He roars a mighty roar, as he fills my butt with his love. 
-#  > My dad walks in. 
-#  > Shrek looks him straight in the eye, and says, "It's all ogre now". 
-#  > Shrek leaves through my window. 
-#  > Shrek is love. Shrek is life.
+#  > {pronoun1} {verbs2} a mighty {verb2}, as {pronoun1} fills my {shorthandopenablething} with {pronoun3} {noun}. 
+#  > My {relative} walks in. 
+#  > {name} looks {pronoun2relative} straight in the eye, and says, {somethingnamewouldsay}. 
+#  > {name} leaves through my window. 
+#  > {name} is love. {name} is life.
 
 # pronoun guide
     # he(1)/him(2)/his(3)
