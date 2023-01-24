@@ -10,7 +10,7 @@ print(f"Enter a pronoun refering to {name} when they are previously mentioned or
 pronoun1 = input()
 print(f"Enter a pronoun that is the object of a verb or preposition refering to {name}. (i.e. him, her, them, etc.) ")
 pronoun2 = input()
-print(f"Enter a pronoun used to refer to a thing or things belonging to {name} (i.e. his, hers, theirs)")
+print(f"Enter a pronoun used to refer to a thing or things belonging to {name} (i.e. his, hers, theirs) (if {name} is she/her, just put her)")
 pronoun3 = input()
 print(f"what is something {name} is known for saying or would say")
 somethingnamewouldsay = input()
@@ -64,28 +64,8 @@ noun2 = input()
 # misc.
 print("Enter something you can spread open or just open (i.e. wallet, door, etc.)")
 openablething = input()
-print(f"Enter a some kind of shorthand for {openablething}, if you can't just type {openablething} again")
+print(f"Enter some kind of shorthand for {openablething}, if you can't just type {openablething} again")
 shorthandopenablething = input()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -108,14 +88,14 @@ print(f"\n\n> I was only {age} years old.\n\n "
       f"\n\n> {pronoun1} whispers in my ear, This is my {nounrelatedname3}.\n\n"
       f"\n\n> {pronoun1} grabs me with {pronoun3} powerful {speciesslashidentifyer} hands, and puts me on my hands and knees.\n\n"
       "\n\n> i'm ready \n\n"
-      f"\n\nI {synonym} my {openablething} for {name}.\n\n"
+      f"\n\n> I {synonym} my {openablething} for {name}.\n\n"
       f"\n\n> {pronoun1} {verbs} my {synonym2}.\n\n"
       f"\n\n> It hurts so much, but I do it for {name}.\n\n"
       f"\n\n> I can feel my {shorthandopenablething} {verbing} as {pronoun1} {namedoingverb}.\n\n"
       f"\n\n> I {verb} against {pronoun3} {noun}.\n\n"
       f"\n\n> I want to please {name}.\n\n "
-      f"\n\n>{pronoun1} {verbs2} a mighty {verb2}, as {pronoun1} fills my {shorthandopenablething} with {pronoun3} {noun2}.\n\n"
-      f"\n\n>My {relative} walks in.\n\n"
-      f"\n\n>{name} looks {pronoun2relative} straight in the eye, and says, {somethingnamewouldsay}.\n\n"
-      f"\n\n>{name} leaves through my window.\n\n"
-      f"\n\n>{name} is love. {name} is life.\n\n"                                                                                   )
+      f"\n\n> {pronoun1} {verbs2} a mighty {verb2}, as {pronoun1} fills my {shorthandopenablething} with {pronoun3} {noun2}.\n\n"
+      f"\n\n> My {relative} walks in.\n\n"
+      f"\n\n> {name} looks {pronoun2relative} straight in the eye, and says, {somethingnamewouldsay}.\n\n"
+      f"\n\n> {name} leaves through my window.\n\n"
+      f"\n\n> {name} is love. {name} is life.\n\n"                                                                                   )
