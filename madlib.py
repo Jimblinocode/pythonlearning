@@ -76,27 +76,27 @@ while running:
               "\nHank will kill me, or worse, hurt my family. I... All I could think to do was to make this video in hope\n"
               "\n-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --\n") 
     elif com == "1 custom":
-       pass
+       print("WIP")
 
     if com == "2 default" or "2":
-        pass
+        print("WIP")
     elif com == "2 custom":
-        pass
+        print("WIP")
 
     if com == "3 default" or "3":
-        pass
+        print("WIP")
     elif com == "3 custom":
-        pass
+        print("WIP")
 
     if com == "4 default" or "4":
-        pass
+        print("WIP")
     elif com == "3 custom":
-        pass
+        print("WIP")
 
     if com == "5 default" or "5":
-        pass
+        print("WIP")
     elif com == "5 custom":
-        pass
+        print("WIP")
         
     
 
