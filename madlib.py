@@ -76,7 +76,7 @@ while running:
               "\nHank will kill me, or worse, hurt my family. I... All I could think to do was to make this video in hope\n"
               "\n-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --\n") 
     elif com == "1 custom":
-       print("WIP")
+        print("WIP")
 
     if com == "2 default" or "2":
         print("WIP")
