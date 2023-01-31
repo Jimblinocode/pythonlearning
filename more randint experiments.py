@@ -10,14 +10,13 @@ for item in targets:
     print(item, "\n -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- \n")
 
 running = True
-com = input()
+
+
 
 def escapechance():
     eschance = randint(0,100)
     if eschance <= 50:
         print("you managed to escape the authorities, for now...")
-        print("SUCCESS", sep=" ")
-        running = False
     elif eschance > 50:
         print("you were arrested and sent to prison before you could get away")
         print("GAME OVER", sep=" ")
@@ -74,7 +73,7 @@ def aim():
         running = False
 
 while running:
-    com = input
+    com = input()
     if com == "short bald man":
         aim()
     if com == "blonde woman in suit":
