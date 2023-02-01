@@ -20,7 +20,7 @@ def escapechance():
     elif eschance > 50:
         print("you were arrested and sent to prison before you could get away")
         print("GAME OVER", sep=" ")
-        running = False
+        
     
 
 def killmove():
@@ -28,14 +28,14 @@ def killmove():
     if killchance < 49:
         print("you point the gun over your dying target, readying yourself to enact the killing blow. suddenly, an assailant comes from behind and tackles you before you get the chance.\n the resulting scuffle causes you and the assailant to fall out of a 6 story window, killing you and the assailant instantly.")
         print("GAME OVER", sep=" ")
-        running = False
+        
     elif killchance > 49 and killchance < 90:
         print("you point the gun over your dying target, readying yourself to enact the killing blow. you manage to shoot 2-3 more rounds at the target brfore you hear police sirens.\n your target is definately dead, but the authorities are after you now.")
         escapechance()
     elif killchance > 90:
         print("you point the gun over your dying target, readying yourself to enact the killing blow. you completely empty your clip into the target, ensuring their death.\n you manage to somehow do this without alerting anyone in the building, giving you ample time to escape and ensuring you get away scot free.")
         print("SUCCESS", sep=" ")
-        running = False
+      
 
 
 def aim():
@@ -48,7 +48,7 @@ def aim():
     elif chance > 4 and chance < 20:
         print("you fire at the target, but the gun jams to the point of exploding, blowing your arm off and causing you to bleed to death in the process.")
         print("GAME OVER", sep=" ")
-        running = False
+        
     elif chance > 20 and chance < 40:
         print("you shoot at the target, but the bullet meerly skims their arm, allowing the target to find cover and contact the authorities. you try to leave before the authorities catch you")
         escapechance()
@@ -63,14 +63,14 @@ def aim():
     elif chance > 60 and chance < 80:
         print("your bullet misses the target completely and ricochets off a metal surface within the building and hits you in the head, killing you instantly.")
         print("GAME OVER", sep=" ")
-        running = False
+        
     elif chance > 80 and chance < 90:
         print("you shoot the target in the head, killing them instantly. this alerts everyone in the building, leading to the authorities being contacted. you try to escape before they find you.")
         escapechance()
     elif chance > 90:
         print("you shoot the target in the head, killing them instantly. you somehow do this without alerting anyone in the building. this allows you to escape unnoticed and get away scot free")
         print("SUCCESS", sep=" ")
-        running = False
+        
 
 while running:
     com = input()
