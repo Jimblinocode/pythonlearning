@@ -3,9 +3,10 @@ from random import randint
 
 com = input()
 
-location = randint(0,59)
 
-location2 = randint(1,25)
+
+
+
 map = [
         ["-----------------------------------------------------------"],
         ["|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"],
@@ -35,17 +36,25 @@ map = [
         ["-----------------------------------------------------------"],
     ]
 
+maplength = randint(0, len(map))
 
-    
+innermap = randint(0,len(map[maplength][0]))
+
 
 
 if com == "m":
     for item in map:
-        for item in item:
-            print(item)
-if com == "where am i?":
-    for item in map:
-        for item in item:
-            loc2 = "a"
-            for item in item:
-                loc2 += item[location]
+       print(item[0])     
+elif com == "where am i?":
+    loc = "a"
+    for item in map[maplength]:
+        loc += item[innermap]
+        print(loc)
+
+
+# for item in map[maplength]:
+    # print(item[innermap])
+
+
+
+#print(innermap)
