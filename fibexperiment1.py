@@ -9,9 +9,13 @@ def fib(n) -> int:
         return(1)
     return fib(n - 1) + fib(n - 2)
 
-running = True
+# running = True
 
-while running:
-    num = 0
-    fib(num)
-    num += 1
+
+print(fib(20))
+
+
+#while running:
+    #num = 0
+    #fib(num)
+    #num += 1
