@@ -11,7 +11,7 @@ def fib(n) -> int:
 
 def magicfibball():
     num = randint(0,fib(20))
-    num2: int = fib(20)/4
+    num2 = int(fib(20)/4)
     if num < num2:
         return("yeah huh")
     elif num == num2:
