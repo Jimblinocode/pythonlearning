@@ -12,7 +12,6 @@ tictactoe = [
 
 
 
-
 running = True
 
 for item in tictactoe:
