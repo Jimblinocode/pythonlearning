@@ -11,7 +11,6 @@ tictactoe = [
 
 
 
-
 running = True
 
 for item in tictactoe:
@@ -109,3 +108,4 @@ while running:
     elif tictactoe[0][2] == "O" and tictactoe[1][1] == "O" and tictactoe[2][0] == "O":
         print("PLAYER 2 WINS")
         break
+    
