@@ -5,40 +5,56 @@ grid = [[" " for i in range(3)]for i in range(3)]
 def gridgen(grid):
     for row in grid:
         for item in row:
-            print(item, end="")
+            print(item, end=" ")
         print("")
     return(grid)
 
+#win/draw state
 
 
 
-print("T I C T A C T O E")
-gridgen(grid)
 
 # Player controller
 playernum = 0
-player = ("X", "O", "@")
-
+playerchar = ("Y", "O", "@")
+running = True
 def gameplayloop():
+    global running
     global playernum
-    global player
-    global cls
-    while True:
+    global playerchar
+    while running:
+        print("T I C T A C T O E")
+        gridgen(grid)
+        playernum %= 3
+        player = playerchar[playernum]
+        playernum += 1
         try:   
-            print(f"Player {playernum + 1}, please enter 2 numbers between 0 and 2, the first one will represent a row, the second will represent the column ")
+            print(f"Player {playernum}, please enter 2 numbers between 0 and 2, the first one will represent a row, the second will represent the column ")
             n1, n2 = (int(input()), int(input()))
-            if grid[n1][n2] == player[0] or grid[n1][n2] == player[1] or grid[n1][n2] == player[2]:
+            if grid[n1][n2] == playerchar[0] or grid[n1][n2] == playerchar[1] or grid[n1][n2] == playerchar[2]:
                 print("SPOT TAKEN, PLEASE ENTER DIFFERENT COORDINATES")
             else:
-                grid[n1][n2] = player[playernum]
-                gridgen(grid)
-                playernum += 1
-                player[playernum] %= 2
-                system(cls)
-
+                grid[n1][n2] = player
+                system("cls")
+            #win/draw state
+            for row in grid:
+                if row == [playerchar[playernum - 1], playerchar[playernum - 1], playerchar[playernum - 1]]:
+                    print("T I C T A C T O E")
+                    gridgen(grid)
+                    print(f"P{playernum} WINS!")
+                    running = False
         except:
-            print("INVALID CHARACTER, PLEASE ENTER A VALID NUMBER")
+            print("INVALID INPUT")
             n1, n2 = gameplayloop()
 
 
+
+
 gameplayloop()
+
+
+
+
+
+
+
