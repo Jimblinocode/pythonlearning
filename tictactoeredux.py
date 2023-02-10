@@ -16,7 +16,7 @@ def gridgen(grid):
 
 # Player controller
 playernum = 0
-playerchar = ("Y", "O", "@")
+playerchar = ("X", "O")
 running = True
 def gameplayloop():
     global running
@@ -25,13 +25,13 @@ def gameplayloop():
     while running:
         print("T I C T A C T O E")
         gridgen(grid)
-        playernum %= 3
+        playernum %= 2
         player = playerchar[playernum]
         playernum += 1
         try:   
             print(f"Player {playernum}, please enter 2 numbers between 0 and 2, the first one will represent a row, the second will represent the column ")
             n1, n2 = (int(input()), int(input()))
-            if grid[n1][n2] == playerchar[0] or grid[n1][n2] == playerchar[1] or grid[n1][n2] == playerchar[2]:
+            if grid[n1][n2] == playerchar[playernum - 1] or grid[n1][n2] == playerchar[playernum%2] or grid[n1][n2] == playerchar[playernum - 2]:
                 print("SPOT TAKEN, PLEASE ENTER DIFFERENT COORDINATES")
             else:
                 grid[n1][n2] = player
