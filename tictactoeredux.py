@@ -15,7 +15,7 @@ def gridgen(grid):
 def diags(grid):
     newlist = []
     newlist.append([grid[i][i] for i in range(3)])
-    newlist.append([grid[i][2-i]] for i in range(3))
+    newlist.append([grid[i][2-i] for i in range(3)])
     return(newlist)
 
 def transpose(grid):
@@ -24,6 +24,10 @@ def transpose(grid):
         for coli in range(len(grid[rowi])):
             newlist[rowi][coli] = grid[coli][rowi]
     return (newlist)
+
+drawlist = []
+
+
 
 
 # Player controller
@@ -44,12 +48,12 @@ def gameplayloop():
             playernum += 1
             print(f"Player {playernum}, please enter 2 numbers between 0 and 2, the first one will represent a row, the second will represent the column ")
             n1, n2 = (int(input()), int(input()))
-            if grid[n1][n2] == playerchar[playernum - 1] or grid[n1][n2] == playerchar[playernum%2] or grid[n1][n2] == playerchar[playernum - 2]:
+            if grid[n1][n2] == playerchar[playernum - 1] or grid[n1][n2] == playerchar[playernum%2]:
                 print("SPOT TAKEN, PLEASE ENTER DIFFERENT COORDINATES")
             else:
                 grid[n1][n2] = player
                 system("cls")
-                #win/draw state
+                #win state
             for row in grid:
                 if row == [player, player, player]:
                     print("T I C T A C T O E")
@@ -68,14 +72,22 @@ def gameplayloop():
                     gridgen(grid)
                     print(f"P{playernum} WINS!")
                     running = False
+            draw = True
+            for row in grid:
+                for item in row:
+                    if item == " ":
+                        draw = False
+            if draw == True:
+                 print("T I C T A C T O E")
+                 gridgen(grid)
+                 print("DRAW")
+                 running = False
+            if draw == False:
+                continue
+
         except:
             print("INVALID INPUT")
             n1, n2 = gameplayloop()
-
-
-
-
-
 gameplayloop()
 
 
