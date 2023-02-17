@@ -15,6 +15,8 @@ Pyromancer = False
 Mage = False
 clergy = False
 
+
+
 stats = {
     "HP: ": " ",
     "MP: ": " ",
@@ -50,37 +52,42 @@ def MPdecider():
     elif stats["Intellect: "] == 20:
         stats["MP: "] = 25
 
+def focusdecider():
+    if brute == True:
+        focus = "Strength: "
+        return(focus)
+    elif knight == True:
+        focus = "Health: "
+        return(focus)
+    elif bandit == True:
+        focus = "Dexterity: "
+        return(focus)
+    elif Pyromancer == True:
+        focus = "Passion: "
+        return(focus)
+    elif Mage == True:
+        focus = "Intellect: "
+        return(focus)
+    elif clergy == True:
+        focus = "Empathy: "
+        return(focus)
+
+
+
 def statchooser():
     statlist = []
-
+    classlist = [brute, knight, bandit, Pyromancer, Mage, clergy]
+    focus = focusdecider()
     i = 0
     while i < 6:
         statlist.append(randint(1,20))
         i += 1
-    if brute == True:
-        focus = "Strength: "
-        stats["Strength: "] = max(statlist)
-        statlist.remove(max(statlist))
-    elif knight == True:
-        focus = "Health: "
-        stats["Health: "] = max(statlist)
-        statlist.remove(max(statlist))
-    elif bandit == True:
-        focus = "Dexterity: "
-        stats["Dexterity: "] = max(statlist)
-        statlist.remove(max(statlist))
-    elif Pyromancer == True:
-        focus = "Passion: "
-        stats["Passion: "] = max(statlist)
-        statlist.remove(max(statlist))
-    elif Mage == True:
-        focus = "Intellect: "
-        stats["Intellect: "] = max(statlist)
-        statlist.remove(max(statlist))
-    elif clergy == True:
-        focus = "Empathy: "
-        stats["Empathy: "] = max(statlist)
-        statlist.remove(max(statlist))
+    
+    for item in classlist:
+        if item == True:
+            stats[focus]= max(statlist)
+            statlist.remove(max(statlist))
+
     base = 4
     for key in stats:
         if key == "HP: " or key == "MP: ":
