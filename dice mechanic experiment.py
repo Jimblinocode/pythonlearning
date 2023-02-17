@@ -53,40 +53,44 @@ def MPdecider():
         stats["MP: "] = 25
 
 def focusdecider():
+    global brute
+    global knight
+    global bandit
+    global Pyromancer
+    global Mage
+    global clergy
     if brute == True:
         focus = "Strength: "
-        return(focus)
+        brute = False
     elif knight == True:
         focus = "Health: "
-        return(focus)
+        knight = False
     elif bandit == True:
         focus = "Dexterity: "
-        return(focus)
+        bandit = False
     elif Pyromancer == True:
         focus = "Passion: "
-        return(focus)
+        Pyromancer = False
     elif Mage == True:
         focus = "Intellect: "
-        return(focus)
+        Mage = False
     elif clergy == True:
         focus = "Empathy: "
-        return(focus)
+        clergy = False
+    return(focus)
 
 
 
 def statchooser():
     statlist = []
-    classlist = [brute, knight, bandit, Pyromancer, Mage, clergy]
     focus = focusdecider()
     i = 0
     while i < 6:
         statlist.append(randint(1,20))
         i += 1
-    
-    for item in classlist:
-        if item == True:
-            stats[focus]= max(statlist)
-            statlist.remove(max(statlist))
+   
+    stats[focus]= max(statlist)
+    statlist.remove(max(statlist))
 
     base = 4
     for key in stats:
