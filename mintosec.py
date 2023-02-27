@@ -20,7 +20,7 @@ def daytosec(day):
     sec = day * hourtosec(24)
     return(sec)
 
-def anytosec (day=0, hour=0, min=0, sec=0):
+def anytosec (day=2, hour=0, min=0, sec=0):
     sec = daytosec(day) + hourtosec(hour) + mintosec(min) + sec
     return(sec)
 
