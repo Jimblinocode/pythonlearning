@@ -26,3 +26,10 @@
 # custom classes are mutable and can be changed, same with objects created within those functions, however you can't change the attributes of objects python gives to you by default
 
 # the self parameter: a parameter that just represents the object within your class
+
+# how to actually use classes
+# the difference between attributes and parameters: parameters are what you pass into the method (function but inside the scope of a class) while attributes are properties of an object
+
+# modules:
+# modules at their base form are just python files
+# you can impoort them to the file your working on by typing "import {filename}" or "from {filename} import {atrribute}" (if you want to import a specific attribute of said module)
