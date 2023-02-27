@@ -21,5 +21,4 @@ def videoessaygenerator():
 
 
 while True:
-    com = input()
     print(videoessaygenerator())
