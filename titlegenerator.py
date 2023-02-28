@@ -1,6 +1,6 @@
 from random import randint
-
-
+import time
+import os
 
 
 
@@ -21,4 +21,6 @@ def videoessaygenerator():
 
 
 while True:
+    time.sleep(60)
+    os.system("cls")
     print(videoessaygenerator())
