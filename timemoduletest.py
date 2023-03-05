@@ -7,6 +7,6 @@ from os import system
 
 
 while True:
-    lt = time.asctime(time.localtime( ))
+    lt = time.asctime(time.localtime())
     system("cls")
     print(lt)
