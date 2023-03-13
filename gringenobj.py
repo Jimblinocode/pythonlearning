@@ -1,4 +1,5 @@
 import random
+import os
 
 class worldbiome:
     def __init__(self, tree, grass, soil):
@@ -10,10 +11,13 @@ class worldbiome:
 desert = worldbiome("P", "#", "S")
 grassland = worldbiome("O","|", "D")
 
-truth = False
 
-truelist = [[truth for item in range(6)] for item in range(6)]
-world = [["B" for item in range(6)] for item in range(6)]
+
+
+world = [["B" for item in range(12)] for item in range(12)]
+
+objlist =[desert, grassland]
+biome = objlist[random.randint(0,1)]
 
 def gridprint(list):
     for row in list:
@@ -21,25 +25,24 @@ def gridprint(list):
             print(item, end="")
         print("")
 
-def boolevaluator():
+def worldgen():
         try:
             i = 0
-            condition = random.randint(0,36)
+            condition = random.randint(0,144)
             while i < condition:
-                n1,n2 = (random.randint(0,5), random.randint(0,5))
-                if truelist[n1][n2] == True:
+                n1,n2 = (random.randint(0,11), random.randint(0,11))
+                if world[n1][n2] == biome.S:
+                    world[n1][n2] = biome.G
+                elif world[n1][n2] == biome.G:
+                    world[n1][n2] == biome.T
+                elif world[n1][n2] == biome.T:
                     continue
                 else:
-                    truelist[n1][n2] = True
+                    world[n1][n2] = biome.S
                     i += 1
+            gridprint(world)
         except:
             print("UH OH YOU MADE A STINKY!")
-
-def grasslandgenerator():
-    coordinates = False
-    for row in truelist:
-        for item in row:
-            if item == True:
-                coordinates = True
-
-
+ 
+os.system("cls")
+worldgen()   
