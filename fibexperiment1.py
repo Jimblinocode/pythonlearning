@@ -12,7 +12,6 @@ def fib(n) -> int:
 running = True
 
 num = 1
-
 while running:
     print(num, fib(num))
     num += 1
