@@ -22,7 +22,10 @@ def gridclear():
                         coordinates = True
             if coordinates == True:
                 print(f"{penis},{penis2} TRUE")
-                symbol[penis][penis2] = " "
+                if symbol[penis][penis2] == " ":
+                    continue
+                else:
+                    symbol[penis][penis2] = " "
                 for row in symbol:
                     for column in row:
                         print(column, end="")
@@ -40,7 +43,6 @@ def gridclear():
 
 
 def randomgridconfig():
-    
     i = 0
     condition = randint(0,36)
     while i < condition:
