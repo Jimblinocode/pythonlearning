@@ -1,0 +1,23 @@
+- match case:
+    like an if statement but easier to read
+    
+    ex:
+    thing = "string"
+
+    match thing:
+        case "string":
+            do thing
+        case "not string":
+            do other thing 
+        case _: (the "else" of an if statement)
+            do other thing
+- open function, .read method and .readlines method
+    the open function creates a new file object that represents the file. 
+    .read method returns the contents of the file object its called open
+    .readlines method returns each line of the file object as an item in a list.
+- .split 
+    a string method that puts different parts of your string into a list divided by whats passed into the method. 
+    ex:
+        thing = "i like big tibbies"
+
+        thing.split("b")
