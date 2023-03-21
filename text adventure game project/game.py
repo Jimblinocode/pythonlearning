@@ -102,8 +102,7 @@ class Game:
             if inp == "WEST":
                 print(loc.desc[2])
             if inp == "NORTH" and loc == self.map[0]:
-                print(open("text adventure game project/bonustext").readlines[1]) # bonus text that appears when you try to go north on room 1, thought it might spice things up a bit 
-            else:
+                print(open("text adventure game project/bonustext").readlines[1]) # bonus text that appears when you try to go north on room 1.
                 print("you run into a wall.")
             
         
@@ -133,6 +132,8 @@ class Game:
                     l += 3
                 elif com[1] == "NORTH":
                     l -= 3
+                    if l == 0: # might get rid of later
+                        continue 
                 
                 
                 
