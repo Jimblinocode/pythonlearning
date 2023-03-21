@@ -1,2 +1,2 @@
 file = open("notes.txt")
-lines = file.readlines
+lines = file.readlines()
