@@ -10,7 +10,7 @@ class Game:
             "SOUTH": 1,
             "WEST": 0
             },
-            [],
+            [items.item("GLOCK 18"), items.item("ORB")],
             [] ),
             rooms.room(2,{
             "EAST": 3,
@@ -96,19 +96,50 @@ class Game:
                         print(loc.desc[7])
                     case 8:
                         print(loc.desc[8])
+            elif inp == "NORTH": 
+                match loc.directions["NORTH"]:
+                    case 1:
+                        print(loc.desc[0])
+                    case 4:
+                        print(loc.desc[1])
+                    case 6:
+                        print(loc.desc[4])
+                    case 8:
+                        print(loc.desc[5])
+            
 
                         
         except:
-            if inp == "WEST":
-                print(loc.desc[2])
-            if inp == "NORTH" and loc == self.map[0]:
-                print(open("text adventure game project/bonustext").readlines[1]) # bonus text that appears when you try to go north on room 1.
-                print("you run into a wall.")
-            
+            match inp:
+                case "SOUTH":
+                    print("You ran into a wall.")
+                    print(loc.desc[num])
+                case "NORTH":
+                    if num == 6:
+                        loc = self.map[0]
+                        print(loc.desc[0])
+                        return(loc)
+                    else:
+                        print("You ran into a wall.")
+                        print(loc.desc[num])
+                case "EAST":
+                    if num == 3:
+                        loc = self.map[2]
+                        print(loc.desc[2])
+                        return(loc)
+                    else:
+                        print("You ran into a wall.")
+                        print(loc.desc[num])
+                case "WEST":
+                    print("You ran into a wall.")
+                    print(loc.desc[num])
+
         
     
     def process_command(self):
         pass
+    
+
 
     def run(self):
         print("what is your name?")
@@ -120,22 +151,31 @@ class Game:
         while self.gamerun:
             rcom = input()
             com = rcom.split(" ")
+            
+            # if "MOVE" command is typed
             if com[0] == "MOVE":
+                if l == 10:
+                    l -= 3
+                # movement process
                 self.move(com[1], l)
                 if com[1] == "EAST":               
-                    l += 1
+                    l += 1  
+                    if l == 3:
+                        l -= 1
                 elif com[1] == "WEST":
                     l -= 1
-                    if l == 0:
+                    if l < 0:
                         continue
                 elif com[1] == "SOUTH":
                     l += 3
                 elif com[1] == "NORTH":
                     l -= 3
-                    if l == 0: # might get rid of later
+                    if l < 0: # might get rid of later
                         continue 
-                
-                
+                    elif l == 6: #and self.move() == 1:
+                        l -= 6
+                    elif l == 3: #and self.move() == 1:
+                        l -= 3
                 
 
             
