@@ -154,6 +154,8 @@ class Game:
             elif inp == "SOUTH":
                 if self.loc == self.map[4] and self.map[4].monster[0].dead == False:
                     self.l = 4
+                elif self.loc == self.map[5] and self.map[5].monster[0].dead == False:
+                    self.l = 5
                 else:
                     self.l += 3
             elif inp == "NORTH":
