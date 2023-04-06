@@ -327,6 +327,8 @@ class Game:
                                 self.loc.itemslist.remove(object)
                                 print(f"{object.name} has been added to your inventory")
                                 self.bag_empty_check()
+        if self.exist == False:
+            print("ITEM NOT IN ROOM")
 
     def process_drop(self, object):
         for item in self.shorthand:
