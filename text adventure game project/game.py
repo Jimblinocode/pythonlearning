@@ -426,9 +426,7 @@ class Game:
                     else:
                         print(f"you attempt to attack with item {item.name}, the items power is deflected by the wizards ward. the wizard then uses his spells (sponsored by the shadow governement) to wrap all four of your limbs in giant weed vines and then pull you appart, killing you instantly")
                         print(open("text adventure game project/enddead.txt").read())
-                        self.gamerun = False
-
-    
+                        self.gamerun = False 
 
     def run(self):
         print("what is your name?")
