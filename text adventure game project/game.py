@@ -65,6 +65,7 @@ class Game:
         self.loc = self.map[self.l]
         self.bag_empty = True
         self.room_empty = True
+        self.exit = True
         
     def move(self, inp):
         try:
@@ -328,7 +329,7 @@ class Game:
                                 print(f"{object.name} has been added to your inventory")
                                 self.bag_empty_check()
         if self.exist == False:
-            print("ITEM NOT IN ROOM")
+            print("ITEM DOESN'T EXIST")
 
     def process_drop(self, object):
         for item in self.shorthand:
@@ -451,9 +452,19 @@ class Game:
             elif com[0] == "ATTACK":
                 self.process_attack(com[1])
             elif com[0] == "LOOK":
-                self.room_empty_check() 
+                self.room_empty_check()
             elif com[0] == "EXIT":
-                self.gamerun = False      
+                self.exit = True
+                while self.exit:
+                    print("Are you sure (y/n)")
+                    com2 = input()
+                    if com2 == "y" or com2 == "YES":
+                        self.gamerun = False
+                        self.exit = False
+                    elif com2 == "n" or com2 == "NO":
+                        print(self.loc.desc[self.l])
+                        self.exit = False
+                
 Game().run()
 
 
