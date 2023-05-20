@@ -1,7 +1,7 @@
 class Biome:
     def __init__(self):
         self.soil: str = "D"
-        self.fauna = "Sh"
+        self.fauna = "&"
         self.hasgrass = True
 
     def grasschecker(self):
