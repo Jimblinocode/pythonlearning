@@ -20,7 +20,7 @@ class game:
         self.player.update()
 
     def draw(self):
-        globals.screen.fill(colors.BLACK)
+        globals.screen.fill(colors.GREY)
         self.player.draw()
         pygame.display.flip()    
 
