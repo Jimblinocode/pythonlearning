@@ -13,15 +13,20 @@ class Player:
         self.L = False
         self.U = False
         self.D = False
-        self.speed = 10
+        self.slow = False
     
     def process_input(self, controls):
         self.U = controls[pygame.K_w]
         self.D = controls[pygame.K_s]
         self.R = controls[pygame.K_d]
         self.L = controls[pygame.K_a]
+        self.slow = controls[pygame.K_SPACE]
 
     def update(self):
+        if self.slow:
+            self.speed = 5
+        else:
+            self.speed = 10
         if self.U:
             self.pos[1] -= self.speed
         if self.D:
@@ -29,10 +34,11 @@ class Player:
         if self.R:
             self.pos[0] += self.speed
         if self.L:
-            self.pos[0] -= self.speed
+            self.pos[0] -= self.speed    
+            
         self.rect = self.img.get_rect(center = self.pos)
         margin_X = self.size[0]/2
-        margin_Y = self.size[0]/2
+        margin_Y = self.size[1]/2
 
         if self.pos[0] - margin_X < 0:
             self.pos[0] = margin_X
@@ -43,6 +49,8 @@ class Player:
         if self.pos[1] + margin_Y > globals.res[1]:
             self.pos[1] = globals.res[1] - margin_Y
         self.rect = self.img.get_rect(center = self.pos)
+
+
 
     def draw(self):
         globals.screen.blit(self.img, self.rect)
