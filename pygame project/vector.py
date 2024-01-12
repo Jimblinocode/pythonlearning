@@ -7,5 +7,3 @@ class Vector:
 
     def __truediv__(self, other):
         return Vector(self.x / other, self.y / other)
-
-vect = Vector()
