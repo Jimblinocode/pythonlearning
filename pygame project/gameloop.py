@@ -1,7 +1,7 @@
 import globals
 from player import Player
 import colors
-import pygame
+import pygame 
 from enemies import enemy
 
 class game:
