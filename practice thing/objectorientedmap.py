@@ -1,7 +1,7 @@
 import random
 import biomes
 
-class map:
+class map():
     def __init__(self):
         self.world_size = (input("long:"), input("tall:"))
         self.world = [["#" for row in range(int(self.world_size[0]))] for column in range(int(self.world_size[1]))]
